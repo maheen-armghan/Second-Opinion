@@ -1,0 +1,242 @@
+export type Language = 'en' | 'ur';
+
+export const TRANSLATIONS = {
+  en: {
+    appTitle: 'Second Opinion',
+    subTitle: 'Prescription Safety Verification System for Pakistan',
+    tagline: 'Catch illegibility, dosage errors and dangerous drug interactions before dispensing.',
+    safetyNotice: 'Safety-Net Tool: Designed to assist pharmacists and patients. Does not replace physician judgment.',
+    
+    // Nav & Controls
+    navScanner: 'Rx Safety Scanner',
+    navDoctorsNearMe: 'Doctors Near Me',
+    languageSwitch: 'Urdu / English',
+    historyLog: 'Audit History',
+    newScan: 'New Prescription Scan',
+    connectionStatus: 'Database Connected',
+    demoMode: 'Demo Mode Active',
+    signIn: 'Sign In',
+    signOut: 'Sign Out',
+    guestUser: 'Guest Mode',
+
+    // Sample Selector & Uploader
+    uploadHeader: 'Upload Prescription Photo',
+    uploadSubtext: 'Upload or capture a handwritten OPD prescription photo to verify drug safety.',
+    browseFiles: 'Choose File',
+    takePhoto: 'Camera Photo',
+    sampleScenarios: 'Preset Test Scenarios (Demo Prescriptions):',
+    sample1: 'Safe Prescription (Panadol + Risek)',
+    sample2: 'Dosage Warning (Paracetamol 1500mg)',
+    sample3: 'Dangerous Interaction (Warfarin + Aspirin)',
+    sample4: 'Dangerous Interaction (Enalapril + Aldactone)',
+    sample5: 'Unreadable / Blurry Handwriting',
+    openDemoSamples: 'Try Demo Prescription',
+    
+    // Processing steps
+    processingOcr: 'Scanning handwriting via OCR model...',
+    processingMatching: 'Fuzzy matching against Pakistan drug database...',
+    processingRules: 'Evaluating dangerous interactions and dosage thresholds...',
+
+    // OCR Verification Table
+    ocrVerificationTitle: 'Extracted Medication Verification',
+    ocrVerificationSubtext: 'Inspect extracted text below. Edit fields directly to correct OCR transcription errors.',
+    rawExtractedText: 'Extracted OCR Text',
+    matchedDrugName: 'Matched Database Drug',
+    extractedDose: 'Dose (mg)',
+    frequency: 'Frequency',
+    confidence: 'OCR Confidence',
+    actions: 'Actions',
+    editItem: 'Edit',
+    removeItem: 'Remove',
+    addItem: 'Add Medicine Entry',
+    reAnalyzeBtn: 'Run Safety Check',
+
+    // Safety Traffic Light Cards
+    safetyStatusHeader: 'Safety Verification Results',
+    safeBadge: 'LOOKS SAFE TO DISPENSE',
+    warningBadge: 'DOSAGE BOUNDARY WARNING',
+    dangerBadge: 'DANGEROUS INTERACTION DETECTED',
+    unreadableBadge: 'UNREADABLE HANDWRITING DETECTED',
+    
+    dosageAlertsTitle: 'Dosage Boundary Warnings',
+    interactionsTitle: 'Dangerous Drug Interactions Found',
+    doctorAdviceTitle: 'Clinical Guidance',
+    
+    // Report & Context Labels
+    digitizedReportTitle: 'Digitized Prescription Report',
+    doctorDetails: 'Prescribing Physician',
+    patientDetails: 'Patient Name',
+    patientAgeDetails: 'Patient Age',
+    clinicDetails: 'Clinic / Practice Address',
+    issueDate: 'Verification Date',
+    medicationList: 'Medication List and Instructions',
+    summaryTitle: 'Prescription Summary',
+    printReport: 'Print Prescription Slip',
+    saveToAuditLog: 'Save to History',
+    savedSuccess: 'Saved to Audit Log successfully',
+    
+    // Audit History Drawer
+    auditTitle: 'Pharmacy Scan Audit Trail',
+    searchPlaceholder: 'Search past scans by patient, doctor, or drug...',
+    filterAll: 'All Scans',
+    filterSafe: 'Safe Only',
+    filterWarning: 'Warnings',
+    filterDanger: 'Dangerous',
+    noHistory: 'No past scans recorded yet. Scan a prescription to build an audit trail.',
+    viewDetails: 'View Report',
+
+    // Doctors Near Me Strings
+    doctorsNearMeTitle: 'Nearby Doctors & Healthcare Centers',
+    doctorsNearMeSubtext: 'Find real-time specialists, clinics, and OPD hospitals near your location in Faisalabad',
+    useMyLocation: 'Use My Location',
+    locating: 'Locating...',
+    faisalabadDefault: 'Defaulting to Faisalabad Center',
+    searchDoctorPlaceholder: 'Search by doctor name, hospital, or specialty...',
+    allDepartments: 'All Specialties',
+    deptGeneralMedicine: 'General Medicine',
+    deptOrthopedics: 'Orthopedics',
+    deptNeurology: 'Neurology',
+    deptCardiology: 'Cardiology',
+    deptPediatrics: 'Pediatrics',
+    deptGynecology: 'Gynecology',
+    deptDermatology: 'Dermatology',
+    deptENT: 'ENT (Ear Nose Throat)',
+    deptOphthalmology: 'Ophthalmology (Eye)',
+    deptPsychiatry: 'Psychiatry',
+    deptDentistry: 'Dentistry',
+    getDirections: 'Get Directions',
+    callNow: 'Call Clinic',
+    openNow: 'Open Now',
+    closedNow: 'Closed',
+    kmAway: 'km away',
+    showingResults: 'Showing nearby healthcare facilities',
+    noDoctorsFound: 'No doctors or clinics found matching your criteria.',
+    dataSourceGoogle: 'Powered by Live Google Places API',
+    dataSourceOSM: 'Powered by Live OpenStreetMap',
+    viewList: 'List View',
+    viewMap: 'Map View',
+
+    // Footer
+    footerText: 'Built for Pakistan Healthcare Safety Net • Second Opinion System',
+    disclaimer: 'Disclaimer: Second Opinion is an automated safety verification tool. All clinical flags must be verified by a licensed healthcare provider.'
+  },
+  ur: {
+    appTitle: 'سیکنڈ اوپینین (Second Opinion)',
+    subTitle: 'پاکستان کے لیے نسخہ جات کی حفاظتی تصدیق کا نظام',
+    tagline: 'دوا دینے سے پہلے بدخطی، غلط مقدار اور ادویات کے خطرناک تضاد کو پکڑیں۔',
+    safetyNotice: 'حفاظتی انتباہ: یہ نظام فارماسسٹ کی مدد کے لیے ہے۔ یہ ڈاکٹر کے حتمی فیصلے کا نعم البدل نہیں ہے۔',
+    
+    // Nav & Controls
+    navScanner: 'نسخہ حفاظتی اسکینر',
+    navDoctorsNearMe: 'قریبی ڈاکٹرز اور کلینکس',
+    languageSwitch: 'English / اردو',
+    historyLog: 'آڈٹ ہسٹری (سابقہ رکارڈ)',
+    newScan: 'نیا نسخہ اسکین کریں',
+    connectionStatus: 'ڈیٹا بیس منسلک ہے',
+    demoMode: 'ڈیمو موڈ فعال ہے',
+    signIn: 'سائن ان کریں',
+    signOut: 'سائن آؤٹ',
+    guestUser: 'مہمان موڈ',
+
+    // Sample Selector & Uploader
+    uploadHeader: 'نسخے کی تصویر اپ لوڈ کریں',
+    uploadSubtext: 'دوا کی حفاظت کی تصدیق کے لیے ہاتھ سے لکھے گئے نسخے کی تصویر اپ لوڈ یا کیمرے سے کھینچیں۔',
+    browseFiles: 'فائل منتخب کریں',
+    takePhoto: 'کیمرے سے تصویر لیں',
+    sampleScenarios: 'تجرباتی نمونہ نسخہ جات (ڈیمو):',
+    sample1: 'محفوظ نسخہ (Panadol + Risek)',
+    sample2: 'خوراک کی زیادہ مقدار (Paracetamol 1500mg)',
+    sample3: 'خطرناک تضاد (Warfarin + Aspirin)',
+    sample4: 'خطرناک تضاد (Enalapril + Aldactone)',
+    sample5: 'غیر واضح بدخطی',
+    openDemoSamples: 'تجرباتی نسخہ دیکھیں',
+    
+    // Processing steps
+    processingOcr: 'OCR ماڈل سے تحریر پڑھی جا رہی ہے...',
+    processingMatching: 'پاکستانی ڈرگ ڈیٹا بیس سے ادویات ملائی جا رہی ہیں...',
+    processingRules: 'خطرناک تضاد اور مقدار کی تصدیق کی جا رہی ہے...',
+
+    // OCR Verification Table
+    ocrVerificationTitle: 'پڑھی گئی ادویات کی تصدیق',
+    ocrVerificationSubtext: 'ذیل میں او سی آر سے پڑھی گئی ادویات دیکھیں۔ فارماسسٹ حتمی چیک سے پہلے میں تبدیلی کر سکتے ہیں۔',
+    rawExtractedText: 'او سی آر سے پڑھی گئی عبارت',
+    matchedDrugName: 'ڈیٹا بیس سے مطابقت پذیر دوا',
+    extractedDose: 'دوا کی مقدار (ملی گرام)',
+    frequency: 'خوراک کی ترتیب',
+    confidence: 'پڑھنے کی درستگی',
+    actions: 'اقدامات',
+    editItem: 'ترمیم',
+    removeItem: 'حذف کریں',
+    addItem: 'نئی دوا شامل کریں',
+    reAnalyzeBtn: 'حفاظتی چیک چلائیں',
+
+    // Safety Traffic Light Cards
+    safetyStatusHeader: 'حفاظتی تصدیق کے نتائج',
+    safeBadge: 'دوا دینا محفوظ محسوس ہوتا ہے',
+    warningBadge: 'دوا کی مقدار میں گڑبڑ کی تنبیہ',
+    dangerBadge: 'خطرناک ادویاتی تضاد دریافت ہوا',
+    unreadableBadge: 'غير واضح تحریر کی نشاندہی',
+    
+    dosageAlertsTitle: 'خوراک کی مقدار کی تنبیہات',
+    interactionsTitle: 'ادویات کا خطرناک ملاپ (تضاد)',
+    doctorAdviceTitle: 'فارماسسٹ کے لیے ضروری ہدایات',
+    
+    // Report & Context Labels
+    digitizedReportTitle: 'ڈیجیٹل میڈیکل نسخہ رپورٹ',
+    doctorDetails: 'تجویز کنندہ ڈاکٹر',
+    patientDetails: 'مریض کا نام',
+    patientAgeDetails: 'مریض کی عمر',
+    clinicDetails: 'کلینک / ہسپتال کا پتہ',
+    issueDate: 'تصدیق کی تاریخ',
+    medicationList: 'ادویات کی تفصیل اور ہدایات',
+    summaryTitle: 'نسخے کا خلاصہ',
+    printReport: 'ڈیجیٹل رپورٹ پرنٹ کریں',
+    saveToAuditLog: 'سابقہ ریکارڈ میں محفوظ کریں',
+    savedSuccess: 'آڈٹ لاگ میں محفوظ ہو گیا',
+    
+    // Audit History Drawer
+    auditTitle: 'فارمیسی اسکین آڈٹ ریکارڈ',
+    searchPlaceholder: 'مریض، ڈاکٹر یا دوا کے نام سے تلاش کریں...',
+    filterAll: 'تمام اسکین',
+    filterSafe: 'صرف محفوظ',
+    filterWarning: 'تنبیہ والے',
+    filterDanger: 'خطرناک تضاد والے',
+    noHistory: 'ابھی تک کوئی ریکارڈ موجود نہیں ہے۔ اسکین کر کے ہسٹری بنائیں۔',
+    viewDetails: 'رپورٹ دیکھیں',
+
+    // Doctors Near Me Strings
+    doctorsNearMeTitle: 'قریبی ڈاکٹرز اور طبی مراکز',
+    doctorsNearMeSubtext: 'فیصل آباد میں اپنے قریب موجود ماہرِ امراض، کلینکس اور ہسپتالوں کی معلومات حاصل کریں',
+    useMyLocation: 'میری لوکیشن استعمال کریں',
+    locating: 'لوکیشن تلاش کی جا رہی ہے...',
+    faisalabadDefault: 'فیصل آباد سٹی سینٹر',
+    searchDoctorPlaceholder: 'ڈاکٹر کا نام، ہسپتال یا شعبہ تلاش کریں...',
+    allDepartments: 'تمام شعبہ جات',
+    deptGeneralMedicine: 'جنرل میڈیسن',
+    deptOrthopedics: 'آرتھوپیڈکس',
+    deptNeurology: 'نیورولوجی',
+    deptCardiology: 'کارڈیولوجی',
+    deptPediatrics: 'پیڈیاٹرکس',
+    deptGynecology: 'گائناکالوجی',
+    deptDermatology: 'ڈرمیٹولوجی',
+    deptENT: 'ای این ٹی',
+    deptOphthalmology: 'آفتھلمولوجی',
+    deptPsychiatry: 'سائیکیٹری',
+    deptDentistry: 'ڈینٹسٹری',
+    getDirections: 'راستہ دیکھیں',
+    callNow: 'فون کریں',
+    openNow: 'ابھی کھلا ہے',
+    closedNow: 'بند ہے',
+    kmAway: 'کلومیٹر دور',
+    showingResults: 'قریبی طبی مراکز کی فہرست',
+    noDoctorsFound: 'اس علاقے میں کوئی ڈاکٹر یا کلینک نہیں مل سکا۔',
+    dataSourceGoogle: 'Powered by Live Google Places API',
+    dataSourceOSM: 'Powered by Live OpenStreetMap',
+    viewList: 'فہرست دیکھیں',
+    viewMap: 'نقشہ دیکھیں',
+
+    // Footer
+    footerText: 'پاکستان کے نظامِ صحت کی بہتری کے لیے بنایا گیا • Second Opinion System',
+    disclaimer: 'انتباہ: یہ نظام ایک معاون حفاظتی ٹول ہے۔ تمام طبی نتائج کو رجسٹرڈ ڈاکٹر یا فارماسسٹ سے تصدیق کروانا لازم ہے۔'
+  }
+};
